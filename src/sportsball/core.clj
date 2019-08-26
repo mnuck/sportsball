@@ -18,7 +18,7 @@
                    :key-fn keyword)))
 
 (defn iso8601z-to-dt [s]
-  (let [ios8601-format-string "yyyy-MM-dd'T'HH:mm:ss'Z'"]
+  (let [iso8601-format-string "yyyy-MM-dd'T'HH:mm:ss'Z'"]
     (jt/zoned-date-time
      (jt/local-date-time iso8601-format-string s)
      "UTC")))
